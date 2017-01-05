@@ -43,6 +43,6 @@ Create a page for the following:
 * Display a graph of the current buy/sell orders for the output item so the user can see their potential for selling.
 
 ## Resources
-* [Github Repo](https://github.com/tiy-lv-java-2016-06/guild-wars-calculator)
+* [Github Repo](https://github.com/tiy-lv-java-2016-11/guild-wars-calculator)
 * [RestTemplate JavaDoc](http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html)
 * [RestTemplate Spring Example](https://spring.io/guides/gs/consuming-rest/)
