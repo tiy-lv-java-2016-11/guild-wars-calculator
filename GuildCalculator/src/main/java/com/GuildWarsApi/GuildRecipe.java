@@ -3,6 +3,8 @@ package com.GuildWarsApi;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.ArrayList;
+
 /**
  * Created by darionmoore on 1/6/17.
  */
@@ -11,11 +13,12 @@ public class GuildRecipe {
 
     private int id;
     private String type;
-    private String ingredients;
+    @JsonProperty("ingredients")
+    private ArrayList<Ingredient> ingredients;
     @JsonProperty("output_item_id")
     private int outputItem;
 
-    public GuildRecipe(int id, String type, String ingredients, int outputItem) {
+    public GuildRecipe(int id, String type, ArrayList<Ingredient> ingredients, int outputItem) {
         this.id = id;
         this.type = type;
         this.ingredients = ingredients;
@@ -41,11 +44,11 @@ public class GuildRecipe {
         this.type = type;
     }
 
-    public String getIngredients() {
+    public ArrayList<Ingredient> getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(String ingredients) {
+    public void setIngredients(ArrayList<Ingredient> ingredients) {
         this.ingredients = ingredients;
     }
 }
