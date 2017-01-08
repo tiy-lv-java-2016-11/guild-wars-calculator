@@ -22,15 +22,15 @@ Create a page for the following:
 	* rarity
 * Use the items endpoint to get the name of the output item and display that as well
 * Use the ingredients list to and the items endpoint get the information for each of the items
-	* For each item get the current buy price from the prices endpoint
-	* Display the price of the ingredient and the total price (ingredient price x the quantity required)
-* Using the above prices display the total price of the item to create
+	* For each item get the current buy buyPrice from the prices endpoint
+	* Display the buyPrice of the ingredient and the total buyPrice (ingredient buyPrice x the quantity required)
+* Using the above prices display the total buyPrice of the item to create
 
 #### Note: you do not need to create models for this mode
 
 ### Hard Mode
-* Include the sell price of the output item
-* Include the difference in prices between the buy ingredients and the sell price
+* Include the sell buyPrice of the output item
+* Include the difference in prices between the buy ingredients and the sell buyPrice
 * Include the skin images for all items on the page
 * The recipes don't change almost ever so let's cache the results:
 	* Create a recipe model to store the information the api returns in the recipe
