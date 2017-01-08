@@ -13,14 +13,14 @@ import org.springframework.web.client.RestTemplate;
  */
 @Controller
 public class RecipeController {
-    public static final String BASE_URL = "https://api.guildwars2.com/";
+    public static final String BASE_URL = "https://api.guildwars2.com/v2/";
 
     @Autowired
     RestTemplate restTemplate;
 
-    @RequestMapping(path = "/v2/recipes/{recipeId}", method = RequestMethod.GET)
-    public String getRecipe(Model model, @PathVariable Integer recipeId){
-        GuildRecipe recipe = restTemplate.getForObject(BASE_URL + recipeId, GuildRecipe.class);
+    @RequestMapping(path = "/recipes/{recipes}", method = RequestMethod.GET)
+    public String getRecipe(Model model, @PathVariable String recipes){
+        GuildRecipe recipe = restTemplate.getForObject(BASE_URL + recipes, GuildRecipe.class);
         model.addAttribute("recipe", recipe);
 
         return "Home";
