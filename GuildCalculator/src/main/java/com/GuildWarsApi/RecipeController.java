@@ -18,12 +18,28 @@ public class RecipeController {
     @Autowired
     RestTemplate restTemplate;
 
-    @RequestMapping(path = "/recipes/{recipes}", method = RequestMethod.GET)
-    public String getRecipe(Model model, @PathVariable String recipes){
-        GuildRecipe recipe = restTemplate.getForObject(BASE_URL + recipes, GuildRecipe.class);
+    @RequestMapping(path = "/recipes/{recipeId}", method = RequestMethod.GET)
+    public String getRecipe(Model model, @PathVariable Integer recipeId){
+        GuildRecipe recipe = restTemplate.getForObject(BASE_URL + "/recipes/" + recipeId, GuildRecipe.class);
         model.addAttribute("recipe", recipe);
-
         return "Home";
     }
+
+//    @RequestMapping(path = "/items/{outputItemId}", method = RequestMethod.GET)
+//    public String getName(Model model, @PathVariable Integer outputItemId){
+//        GuildRecipe itemName = restTemplate.getForObject(BASE_URL + "/items/" + outputItemId , GuildRecipe.class);
+//        model.addAttribute("itemName", itemName);
+//
+//        return "Home";
+//    }
+
+//    @RequestMapping(path = "/commerce/prices/{ingredientId}", method = RequestMethod.GET)
+//    public String getPrice(Model model, @PathVariable Integer ingredientId){
+//        GuildRecipe price = restTemplate.getForObject(BASE_URL + "/items/" + ingredientId, GuildRecipe.class);
+//        model.addAttribute("price", price);
+//
+//
+//        return "Home";
+//    }
 
 }

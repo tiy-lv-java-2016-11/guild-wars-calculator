@@ -8,12 +8,15 @@
 You're hitting this page
 {{#recipe}}
 <ul>
-    <li>id</li>
-    <li>type</li>
-    <li>{{#ingredients}}{{.}}{{/ingredients}}</li>
-    <li>outputItem</li>
+    <li>id: {{id}}</li>
+    <li>type: {{type}}</li>
+    <li>ingredients: {{ingredients}}</li>
+    <li>OutputItem: {{outputItem}}</li>
+    <li>ItemName: {{#itemName}}{{/itemName}}</li>
 </ul>
 {{/recipe}}
+
+
 
 </body>
 </html>
