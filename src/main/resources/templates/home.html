@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe</title>
+</head>
+<body>
+{{#recipe}}
+<div>
+    <p>Recipe type: {{recipeType}}</p>
+    <h1>{{outputItem.name}}<img src="{{outputItem.imageUrl}}"></h1>
+    <p>Item type: {{outputItem.type}} &tab; Rarity: {{outputItem.type}}</p>
+    <p>Item description: {{outputItem.description}}</p>
+</div>
+<div>
+    <h3>Ingredients Required:</h3>
+    {{#ingredientItems}}
+    <ul>
+        <li><img src="{{imageUrl}}">{{count}} of {{name}} for {{buyPrice}} coins each totals {{totalPrice}}</li>
+    </ul>
+    {{/ingredientItems}}
+</div>
+<div>
+    <h3>Recipe Total : {{buyPrice}}</h3>
+    <h3>Item Sell Price: {{sellPrice}}</h3>
+    <h3>Price Difference: {{priceDifference}}</h3>
+
+</div>
+{{/recipe}}
+</body>
+</html>
